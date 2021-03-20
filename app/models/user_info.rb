@@ -1,6 +1,6 @@
 class UserInfo < ApplicationRecord
-  def bmi
-    weight / height ** 2
+  def self.bmi(weight,height)
+    return weight / (height/100.to_f)**2
   end
 
 end
