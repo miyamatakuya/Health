@@ -13,8 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_03_14_101515) do
 
   create_table "user_infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "morning_weight"
-    t.integer "night_weight"
+    t.integer "weight"
     t.integer "height"
     t.integer "BMI"
     t.date "date"
