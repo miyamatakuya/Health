@@ -1,0 +1,16 @@
+<h1>ユーザー一覧ページ</h1>
+<% @user_infos.each do |user_info| %>
+<div class="user_info">
+    <div class="height">
+      身長：<%= user_info.height %>
+    </div>
+    <div class="weight">
+      体重：<%= user_info.weight %>
+    </div>
+    <div class="BMI">
+      BMI：<%= user_info.BMI %>
+    </div>
+  </div>
+<% end %>
+
+
