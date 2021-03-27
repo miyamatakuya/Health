@@ -31,7 +31,7 @@
   var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['3月1日'],
+      labels: [<% @user_infos.each_with_index do |user_info| %><%= user_info.created_at.strftime("%m月%d日") %> ,<% end %>],
       datasets: [
         
      
