@@ -4,7 +4,6 @@ class CreateUserInfos < ActiveRecord::Migration[6.0]
       t.integer :weight
       t.integer :height
       t.integer :BMI
-      t.date :date
       t.references :user, foreign_key: true
       t.timestamps
     end

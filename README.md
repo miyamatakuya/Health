@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Health
 
-Things you may want to cover:
+アプリ概要
 
-* Ruby version
+このアプリはダイエット中の人が短期間で目標の体型を目指すために日々の体重を
+記録することによりより、日々の自分の体重の変動が確認できるアプリである。
 
-* System dependencies
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

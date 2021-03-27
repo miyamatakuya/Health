@@ -1,6 +1,6 @@
-<h1>ユーザー一覧ページ</h1>
+<div class="contents row">
 <% @user_infos.each do |user_info| %>
-<div class="user_info">
+<div class="user_info"> 
     <div class="height">
       身長：<%= user_info.height %>
     </div>
@@ -12,5 +12,58 @@
     </div>
   </div>
 <% end %>
+</div>
 
 
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+　<title>グラフ</title> 
+</head>
+<body>
+  <h1>折れ線グラフ</h1>
+  <canvas id="myLineChart"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
+  <script>
+  var ctx = document.getElementById("myLineChart");
+  var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['3月1日'],
+      datasets: [
+        
+     
+        {
+          label: 'Weight',
+          data: [ <% @user_infos.each_with_index do |user_info| %><%= user_info.weight %> ,<% end %> ],
+          borderColor: "rgba(0,0,255,1)",
+          backgroundColor: "rgba(0,0,0,0)"
+        },  
+
+      ],
+    },
+    options: {
+      title: {
+        display: true,
+        
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 40,
+            suggestedMin: 0,
+            stepSize: 10,
+            callback: function(value, index, values){
+              return  value +  'kg'
+            }
+          }
+        }]
+      },
+    }
+  });
+  </script>
+</body>
+
+</html>

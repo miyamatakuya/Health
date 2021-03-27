@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2021_03_14_101515) do
     t.integer "weight"
     t.integer "height"
     t.integer "BMI"
-    t.date "date"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
