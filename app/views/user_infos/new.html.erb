@@ -1,10 +1,23 @@
-<div class="contents row">
-  <div class="container">
-    <h3>体重登録</h3>
+<div class="items-sell-main">
+    <h2 class="items-sell-title">体重情報を入力</h2>
     <%= form_with(model: @user_info, local: true) do |form| %>
-      <%= form.text_field :weight, placeholder: "weight" %>
-      <%= form.text_field :height, placeholder: "height" %>
-      <%= form.submit "投稿" %>
+
+
+<div class="new-items">
+      <div class="weight-bold-text">
+        身長
+      </div>
+      
+       <%= form.text_field :height, class:"input-default", placeholder: "height" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          体重     
+        </div>
+         <%= form.text_field :weight,class:"input-default", placeholder: "weight" %>
+      </div>
+      <div class="sell-btn-contents">
+      <%= form.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    </div>
     <% end %>
-  </div>
-</div>
