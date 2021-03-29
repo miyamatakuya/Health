@@ -1,6 +1,3 @@
-<%= image_tag "diet.jpg", alt:"トップ画面",  class:"top-image"%> 
-<h1>〜体重グラフ〜</h1>
-
 <div class="contents row">
 <% @user_infos.each do |user_info| %>
 <div class="user_info"> 
@@ -9,11 +6,12 @@
       日付：<%= user_info.created_at.strftime("%m月%d日") %>
     </div>
     <div class="BMI">
-      体重：<%= user_info.weight %>
+      BMI：<%= user_info.BMI %>
     </div>
   </div>
 <% end %>
 </div>
+
 
 <html lang="ja">
 
@@ -35,8 +33,8 @@
         
      
         {
-          label: 'Weight',
-          data: [ <% @user_infos.each_with_index do |user_info| %><%= user_info.weight %> ,<% end %> ],
+          label: 'BMI',
+          data: [ <% @user_infos.each_with_index do |user_info| %><%= user_info.BMI %> ,<% end %> ],
           borderColor: "rgba(0,0,255,1)",
           backgroundColor: "rgba(0,0,0,0)"
         },  
@@ -55,7 +53,7 @@
             suggestedMin: 0,
             stepSize: 10,
             callback: function(value, index, values){
-              return  value +  'kg'
+              return  value +  ''
             }
           }
         }]
