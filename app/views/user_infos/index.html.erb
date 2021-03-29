@@ -1,4 +1,19 @@
 <%= image_tag "diet.jpg", alt:"トップ画面",  class:"top-image"%> 
+<h1>〜体重グラフ〜</h1>
+
+<div class="contents row">
+<% @user_infos.each do |user_info| %>
+<div class="user_info"> 
+<%= link_to '削除する', user_info_path(user_info.id), method: :delete %>
+ <div class="weight">
+      日付：<%= user_info.created_at.strftime("%m月%d日") %>
+    </div>
+    <div class="BMI">
+      体重：<%= user_info.weight %>
+    </div>
+  </div>
+<% end %>
+</div>
 
 <html lang="ja">
 
@@ -7,7 +22,6 @@
 　<title>グラフ</title> 
 </head>
 <body>
-  <h1>〜体重グラフ〜</h1>
   <canvas id="myLineChart"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 

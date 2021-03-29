@@ -14,13 +14,19 @@ def new
   @user_info = UserInfo.new
 end
 
+def destroy
+  @user_info = UserInfo.find(params[:id])
+  @user_info.destroy
+  redirect_to root_path
+end
+
 
 def create
   weight = params[:user_info][:weight].to_i
   height = params[:user_info][:height].to_i
   bmi = UserInfo.bmi(weight,height)
   UserInfo.create(user_info_params(bmi))
-
+  redirect_to root_path
 end
 
 

@@ -1,6 +1,7 @@
 <div class="contents row">
 <% @user_infos.each do |user_info| %>
 <div class="user_info"> 
+<%= link_to '削除する', user_info_path(user_info.id), method: :delete %>
  <div class="weight">
       日付：<%= user_info.created_at.strftime("%m月%d日") %>
     </div>
