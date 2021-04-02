@@ -70,7 +70,8 @@
 トップ画面のヘッダーの部分のBMIを押すことにより、
 登録したBMIがグラフになって表示されます。
 
-<img width="1347" alt="スクリーンショット 2021-03-30 19 48 33" src="https://user-images.githubusercontent.com/73232006/112977558-2a3f2980-9191-11eb-98ac-8cc8edcb144b.png">
+<img width="1363" alt="スクリーンショット 2021-04-02 11 45 45" src="https://user-images.githubusercontent.com/73232006/113374855-1f5ee180-93a9-11eb-81bb-1008554d9bd8.png">
+
 
 
 
