@@ -8,7 +8,7 @@
 ・ フロントエンド：HTML&CSS / JavaScript 
 ・ バックエンド：Ruby / Ruby on Rails
 ・ 単体テスト・結合テスト：RSpec
-・ インフラ：AWS（EC2 / S3）
+・ インフラ：AWS（EC2）
 ・ テキストエディタ：Visual Studio Code
 
 
